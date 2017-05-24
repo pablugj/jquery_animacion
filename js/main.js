@@ -1,6 +1,6 @@
 var inicio_evento;
 
-$(inicio);
+$(inicio); //ready
 
 function inicio(argument) 
 {
@@ -11,8 +11,14 @@ function inicio(argument)
 function animacion()
 {
 	inicio_evento = new Date().getTime();
-	$(".imagen").fadeOut('slow',termina)
-}
+	$("#imagen").fadeIn(1000,termina);
+	$("#imagen").animate(
+		{
+			
+			opacity: ".5",
+			width: "150%"
+		}, 1500 );
+	}
 
 function termina() 
 {
