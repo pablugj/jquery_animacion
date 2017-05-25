@@ -11,13 +11,9 @@ function inicio(argument)
 function animacion()
 {
 	inicio_evento = new Date().getTime();
-	$("#imagen").fadeIn(1000,termina);
-	$("#imagen").animate(
-		{
-			
-			opacity: ".5",
-			width: "150%"
-		}, 1500 );
+	$(".img").fadeIn(1000,termina);
+
+	
 	}
 
 function termina() 
@@ -26,3 +22,4 @@ function termina()
 	salidaHTML += 'Duracion: ' + (new Date().getTime()-inicio_evento) + ' ms';
 	$('.salida').html(salidaHTML);
 }
+
